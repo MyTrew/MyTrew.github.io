@@ -1,7 +1,7 @@
 //Memory_game.js
 
 //card options
-const cartArray = [
+const cardArray = [
     {
         name:'fries',
         img:'images/fries.png'
@@ -67,7 +67,7 @@ function createBoard() {
         var card = document.createElement('img')
         card.setAttribute('src', 'images/blank.png')
         card.setAttribute('data-id', i)
-    //  cardaddEventListener('click', flipcard)
+        //cardaddEventListener('click', flipcard)
         grid.appendChild(card)
     }
 }
