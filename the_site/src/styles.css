@@ -1,0 +1,49 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.body {
+  width: 50%;
+  max-width: 800px;
+  min-width: 480px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.lastResult {
+  color: white;
+  padding: 3px;
+}
+
+.grid1 {
+    display: flex;
+    flex-wrap: wrap;
+    height: 120px;
+    width: 140px;
+}
+
+.grid2 {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid;
+  height: 120px;
+  width: 140px;
+}
+
+.grid div {
+  height: 20px;
+  width: 20px
+}
+
+.conn-player-one {
+  background-color: red;
+  border-radius: 10px;
+}
+
+.conn-player-two {
+  background-color: orange;
+  border-radius: 10px;
+}
