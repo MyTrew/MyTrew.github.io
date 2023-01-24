@@ -1,24 +1,23 @@
-terraform {
-    required_providers {
-        docker = {
-            source = "this_site_image"
-            version = "1.12.2"
-        }
-    }
-}
+# main.tf
 
-provider "docker" {}
+# 1. Create a `main.tf` file in the root of this repository with the `remote` backend and one or more resources defined.
+#   Example `main.tf`:
+#     # The configuration for the `remote` backend.
+     terraform {
+       backend "https://github.com/MyTrew/MyTrew.github.io" {
+#         # The name of your Terraform Cloud organization.
+        organization = "MyTrew"
 
-resource "this_site_image" "github" {
-    name = "this_site_image:latest"
-    keep_locally = true
-}
-
-resource "this_site_image", "github" {
-    image = this_site_image
-    ports {
-        internal = 80
-        external = 8000
+#         # The name of the Terraform Cloud workspace to store Terraform state files in.
+         workspaces {
+           name = "this_site_workspace"
+         }
+       }
     }
 
-}
+#     # An example resource that does nothing.
+    resource "null_resource" "example" {
+       triggers = {
+         value = "A example resource that does nothing!"
+       }
+     }
