@@ -4,7 +4,7 @@
 #   Example `main.tf`:
 #     # The configuration for the `remote` backend.
      terraform {
-       backend "github.com/MyTrew/MyTrew.github.io" {
+       backend "MyTrew.github.io" {
 #         # The name of your Terraform Cloud organization.
         organization = "MyTrew"
 
