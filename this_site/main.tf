@@ -1,24 +1,27 @@
-# main.tf
+#main.tf
 
-# 1. Create a `main.tf` file in the root of this repository with the `remote` backend and one or more resources defined.
-#   Example `main.tf`:
-#     # The configuration for the `remote` backend.
-     terraform {
-       backend "MyTrew.github.io" {
-#         # The name of your Terraform Cloud organization.
-        organization = "MyTrew"
+name: Deploy to GitHub Pages
 
-#         # The name of the Terraform Cloud workspace to store Terraform state files in.
-         workspaces {
-           name = "this_site_workspace"
-         }
-       }
-    }
+on:
+  push:
+    branches:
+      - main
 
-#     # An example resource that does nothing.
-    resource "null_resource" "example" {
-       triggers = {
-         value = "A example resource that does nothing!"
-       }
-     }
-     
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.3
+        with:
+          branch: gh-pages
+          folder: /Users/a1/Desktop/Coding/React/html_site/MyTrew.github.io/this_site
+          personal_token: ${{ secrets.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}}
+
+resource "github_actions_deploy" "terraform" {
+  repository = "MyTrew/MyTrew.github.io"
+  workflow_id = "terraform.yml"
+}
