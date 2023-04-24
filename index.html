@@ -12,15 +12,15 @@
     <div id="root"></div>
     <script type="module" src="main.jsx"></script>
     
-    <h1>Number guessing game</h1>
-    
+   <h1>Number guessing game</h1>
+   <button onclick="import('./number_guessing.js').then(module => module.numberGuess())">Number Guessing</button>
+
     
     
     <p>Hi Dad,
 
         Sorry you have been feeling under the weather lately. Hopefully this game will cheer you up a bit. The rules are simple. Guess the selected random number between 1 and 100. See if you can guess it in 10 turns or fewer. I'll tell you if your guess was too high or too low. Goodluck. Love you.
       </p> 
-  <section>
     <div class="form">
       <label for="guessField">Enter a guess: </label>
       <input type="text" id="guessField" class="guessField">
@@ -32,7 +32,8 @@
       <p class="lastResult"></p>
       <p class="lowOrHi"></p>
     </div>
-  </section>
+
+  
 <br>
       <p>
         Hey,
@@ -41,23 +42,21 @@
       </p>
     
   <h2>Memory Guessing Game:<span id="result1"> Score</span></h2>
+
+  <button onclick="import('./Games/memory_guessing.js').then(module => module.memoryGuessing())">Memory Guessing</button>
   
 <br>  
-    
+
 <section>
    <div class="grid1">
    </div>
-
-<div>
-  <script src="html_site/public/Games/Memory_game/Memory_game.js" async defer></script>
-  <script src="html_site/public/Games/number_guessing.js" async defer></script>
-  <script src="connect_four.js" async defer></script>
-</div>
 </section>
 <br>
 
 <h3>Connect Four</h3>
 <h3>The current player is: Player <span id="current-player">1</span></h3>
+
+<button onclick="import('./connect_four.js').then(module => module.connectFour())">Connect Four</button>
 <section>
 <h3 id="result2"></h3>
 

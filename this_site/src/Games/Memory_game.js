@@ -1,6 +1,9 @@
 //Memory_game.js
 
 //card options
+
+function memoryGame() {
+
 const cardArray = [
     {
         name:'fries',
@@ -108,3 +111,6 @@ function flipCard() {
 }
 
 createBoard()
+}
+
+export { memoryGame};
