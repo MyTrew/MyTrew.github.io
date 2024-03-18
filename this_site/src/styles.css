@@ -6,10 +6,9 @@
 }
 
 .body {
-  width: 50%;
-  max-width: 800px;
-  min-width: 480px;
+  width: clamp (200px, 50%, 600px); 
   margin: 0 auto;
+  padding: 0%;
   background-color: white;
   background-image: url('https://static.vecteezy.com/system/resources/previews/002/058/317/original/retro-futuristic-80s-background-free-vector.jpg');
   background-repeat: no-repeat;

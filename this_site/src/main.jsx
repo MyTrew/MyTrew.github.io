@@ -9,6 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </React.StrictMode>
 )
 
-//function Greeting{user} {
-//  return.{user}
+//Function Greeting{user} {
+ // return (
+ // return.{user}
 //}

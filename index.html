@@ -9,18 +9,23 @@
   </head>
 
   <body>
+
     <!--<div id="root"></div>
-    script type="module" src="main.jsx"></script> 
+    <script type="module" src="main.jsx"></script> 
     <div>-->
   <div>
    <h1>Number guessing game</h1>
-   <button onclick="import('./number_guessing.js').then(module => module.numberGuess())">Number Guessing</button>
+   <button onClick="Number_Guessing_Game"()>Play</button>
+
+   <!--<button onclick="import('./number_guessing.js').then(module => module.numberGuess())">Number Guessing</button> -->
+<script type="module" src="MyTrew.github.io/this_site/src/number_guessing.js"></script>
 
     
     
     <p>Hi Dad,
 
-        Sorry you have been feeling under the weather lately. Hopefully this game will cheer you up a bit. The rules are simple. Guess the selected random number between 1 and 100. See if you can guess it in 10 turns or fewer. I'll tell you if your guess was too high or too low. Goodluck. Love you.
+      Welcome back to your regularly scheduled programming of a few games for you to play. Most of the bugs are fixed...hopefully...if not send me a ticket and a description and wait 4-6 years for a possible fix if there is any i can conjure up in a few hours~  
+      The rules are simple. Guess the selected random number between 1 and 100. See if you can guess it in 10 turns or fewer. I'll tell you if your guess was too high or too low. Goodluck. Love you.
       </p> 
     <div class="form">
       <label for="guessField">Enter a guess: </label>
@@ -36,17 +41,21 @@
 </div>
   
 <br>
-
+<!--> The new plan is to open a smaller popup window with the game popping up. -->
 <div>
       <p>
         Hey,
 
-        Heres another game probably going to add more but here is some more stuff you could play to pass the time. Much love~
+        Heres another game probably going to add more but here is some more stuff you could play to pass the time. Much love as always~
       </p>
-    
-  <h2>Memory Guessing Game:<span id="result1"> Score</span></h2>
 
-  <button onclick="import('./Games/memory_guessing.js').then(module => module.memoryGuessing())">Memory Guessing</button>
+    <p>
+      This is such a work in progress it may take a while to get everything underwraps.
+    </p>
+    
+  <!--<h2>Memory Guessing Game:<span id="result1"> Score</span></h2>
+
+  <button onclick="import('./Games/memory_guessing.js').then(module => module.memoryGuessing())">Memory Guessing</button> -->
   
 <br>  
 
@@ -62,9 +71,11 @@
 <h3>Connect Four</h3>
 <h3>The current player is: Player <span id="current-player">1</span></h3>
 
-<button onclick="import('./connect_four.js').then(module => module.connectFour())">Connect Four</button>
+<script type="module" src="MyTrew.github.io/this_site/src/connect_four.js"></script>
+
+<!--<button onclick="import('./connect_four.js').then(module => module.connectFour())">Connect Four</button> -->
 <section>
-<h3 id="result2"></h3>
+<!--<h3 id="result2"></h3>
 
 <div class="grid2"></div>
   <div ></div>
@@ -107,7 +118,7 @@
   <div class="taken"></div>
   </div>
 </div>
-
+-->
 <div>
   <h4>Space Invaders</h4>
   <h4 class="results">0</h4>
